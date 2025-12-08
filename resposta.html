@@ -44,17 +44,112 @@
 
             <br><br>
 
-            <label for="entrega">Estado de entrega:</label>
+            <label for="iest">Estado de entrega:</label>
             <br>
-            <input type="text" name="entrega" id="entrega" placeholder="--selecione seu estado--">
+              <select name="estado" id="iest">
+                <option value="" selected> -- Seleciona seu estado -- </option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Geais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
 
             <br><br>
 
             <label for="cnh">Envie uma foto da sua CNH:</label>
             <br>
-            <input type="text" name="cnh" id="cnh" placeholder="seuemail@exemplo.com">
-
+            <input type="file" name="fotocnh" id="fotocnh">
+        
         </fieldset>
+
+         <fieldset>
+        <legend>Escolha do Carro</legend>
+
+        <p>Escolha o modelo:</p>
+
+        <label><input type="radio" name="modelo" value="seal"> BYD Seal</label>
+        <br>
+        <label><input type="radio" name="modelo" value="han"> BYD Han</label>
+        <br>
+        <label><input type="radio" name="modelo" value="song"> BYD Song Plus</label>
+
+        <p>Itens adicionais:</p>
+
+        <label><input type="checkbox" name="itens" value="som"> Som Premium</label>
+        <br>
+        <label><input type="checkbox" name="itens" value="ar"> Ar-condicionado Digital</label>
+        <br>
+        <label><input type="checkbox" name="itens" value="camera"> Câmera 360°</label>
+
+        <p>Cor do carro:</p>
+        <input type="color" name="cor" value="#000000">
+
+        <p>Intensidade da cor (brilho):</p>
+        <input type="range" min="0" max="100" value="50">
+    </fieldset>
+
+    
+    <fieldset>
+        <legend>Entrega</legend>
+
+        <label>Data desejada para entrega:
+            <br>
+            <input type="date" name="data_entrega">
+        </label>
+<br><br>
+        <label>Hora preferida para entrega:
+            <br>
+            <input type="time" name="hora_entrega">
+        </label>
+<br><br>
+        <label>Mês da compra:
+            <br>
+            <input type="month" name="mes_compra">
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Sua Opinião</legend>
+
+        <label>Conte qual é a sua expectativa sobre o carro:</label>
+        <br>
+        <textarea placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea>
+    </fieldset>
+
+    
+    <fieldset>
+        <legend>Avaliação dos Modelos BYD</legend>
+
+        <label>Avalie o BYD Dolphin Plus:
+            <br>
+            <input type="number" min="0" max="5" placeholder="0 a 5 estrelas">
+        </label>
+        
+        <br><br>
+
+        <label>Avalie o BYD GS:
+            <br>
+            <input type="number" min="0" max="5" placeholder="0 a 5 estrelas">
+        </label>
+
+        <br><br>
+        
+        <label>Avalie o BYD Mini:
+            <br>
+            <input type="number" min="0" max="5" placeholder="0 a 5 estrelas">
+        </label>
+    </fieldset>
+
+    
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
 
 
     </form>
